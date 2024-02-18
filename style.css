@@ -1,0 +1,6 @@
+.Bus_seats{
+    display: grid;
+    grid-template-columns:30px 70px 70px 70px 70px;
+    gap: 40px ;
+    
+}
