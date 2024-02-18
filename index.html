@@ -14,8 +14,8 @@
         extend: {
           colors: {
             "primary-clr": '#1DD100',
-            "siteName-clr": '#03071280',
-            "site-bg" : '#F7F8F8'
+            "seatName-clr": '#03071280',
+            "seat-bg" : '#F7F8F8'
           }
         }
       }
@@ -33,8 +33,8 @@
   </style>
 
 </head>
-<body class="w-[90%] m-auto font-raleway">
-    <header class="my-6 space-y-8">
+<body class=" m-auto font-raleway">
+    <header class="w-[90%] m-auto my-6 space-y-8">
         <nav class="flex justify-between">
             <div  class=" text-4xl font-extrabold">
                 <p>P-Ticket</p>
@@ -63,8 +63,9 @@
 
     </header>
     <main>
-        <section class=" my-28">
-            <h1 class="text-4xl font-bold text-center m-auto mb-7">Best offers for you</h1>
+        <!-- Coupon  -->
+        <section class="w-[90%] m-auto my-28 flex flex-col space-y-9">
+            <h1 class="text-4xl font-bold text-center m-auto ">Best offers for you</h1>
             <!-- coupon -->
             <div class=" flex gap-6 justify-center">
 
@@ -72,7 +73,7 @@
                     <div class="pl-11 flex flex-col justify-center ">
                         <h1 class="text-4xl font-extrabold ">15% OFF</h1>
                         <p class="text-xl font-semibold">on your next purchase</p>
-                        <p class="text-sm font-medium">use by January 2024</p>
+                        <p class="text-sm text-seatName-clr font-semibold">use by January 2024</p>
                     </div>
                     <div>
                        <img src="./images/cupon-devider.png" alt=""> 
@@ -80,7 +81,7 @@
                     </div>
                     <div class="pr-7 flex flex-col justify-center ">
                         <h1 class="text-4xl font-bold">NEW15</h1>
-                        <p class="text-sm font-medium">Coupon Code</p>
+                        <p class="text-sm text-seatName-clr font-semibold">Coupon Code</p>
                     </div>
     
                 </div>
@@ -89,24 +90,73 @@
                     <div class="pl-11 flex flex-col justify-center ">
                         <h1 class="text-4xl font-extrabold ">20% OFF</h1>
                         <p class="text-xl font-semibold">on your next purchase</p>
-                        <p class="text-sm font-medium">use by January 2024</p>
+                        <p class="text-sm text-seatName-clr font-semibold">use by January 2024</p>
                     </div>
                     <div>
                        <img src="./images/cupon-devider.png" alt=""> 
                         
                     </div>
                     <div class="pr-7 flex flex-col justify-center ">
-                        <h1 class="text-4xl font-bold">NEW15</h1>
-                        <p class="text-sm font-medium">Coupon Code</p>
+                        <h1 class="text-4xl font-bold">Couple 20</h1>
+                        <p class="text-sm text-seatName-clr font-semibold">Coupon Code</p>
                     </div>
-    
                 </div>
+                
             </div>
-           
-
+            <button class="btn btn-outline btn-success m-auto">See All Offers</button>
 
         </section>
 
+        <!-- seat -->
+        <section class="w-full h-[500px] rounded-t-[50px] bg-[#F7F8F8] border-t-4 border-primary-clr  ">
+            <!-- heading -->
+            <div class=" text-center m-auto">
+                <h1 class="text-5xl">P.H Paribahan</h1>
+                <p>Yes, you can run unit tests and view the results directly within the app. The 
+                    integrated testing features allow for a streamlined </p>
+            </div>
+            <!-- bus info details -->
+            <div class="bg-white rounded-2xl flex w-[90%] m-auto ">
+
+
+                <div class="w-[70%] flex justify-between p-5">
+                    <!-- info heading -->
+                    <div class=" w-[100%] flex justify-between">
+                        <div class="flex gap-2">
+                            <div>
+                                <img src="./images/bus-logo.png" alt="">
+                            </div>
+                            <div>
+                                <h1 class="text-3xl font-bold">Greenline Paribahan</h1>
+                                <p class="text-lg text-seatName-clr font-semibold">Coach-099-WEB ! AC_Business</p>
+                            </div>
+                        </div>
+                        <div class="aviable-seat-number">
+                            <div class="flex gap-2 p-2 rounded-xl text-lg font-medium text-primary-clr bg-[#1DD10026]">
+                                <img  src="./images/seat-green.png" alt="">
+                                <p><span>40</span> Seats left</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- info details -->
+                    <div>
+                        
+                    </div>
+
+                </div>
+
+
+            <!-- divider -->
+                <div><img src="./images/info-devider.png" alt=""> </div>
+                <div><img src="./images/fare.png" alt="">
+                    <h1>550 Taka</h1>
+                    <p>Per Seat</p>
+                </div>
+
+
+            </div>
+
+        </section>
     </main>
 
 
