@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P-Poribahon</title>
+    <!-- daisyUi & Tailwine -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom tailwine -->
+   <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary-clr": '#1DD100',
+            "siteName-clr": '#03071280',
+            "site-bg" : '#F7F8F8'
+          }
+        }
+      }
+    }
+  </script>
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Row css  -->
+  <style>
+    .font-raleway{
+      font-family: "Raleway", sans-serif;
+    }
+  </style>
+
+</head>
+<body class="w-[90%] m-auto font-raleway">
+    <header class="my-6 space-y-8">
+        <nav class="flex justify-between">
+            <div  class=" text-4xl font-extrabold">
+                <p>P-Ticket</p>
+            </div>
+            <div class=" flex gap-2 p-2 text-xl font-bold rounded-xl  border-[#1DD10066] border-2 text-primary-clr bg-[#1DD1001A] ">
+                <p>Bus</p>
+                <img src="./images/bus-icon.png" alt="">
+            </div>
+        </nav>
+
+        </section>
+
+        <section>
+            <div class="hero min-h-screen rounded-[36px] " style="background-image: url(./images/banner.png);">
+                <div class="hero-overlay bg-opacity-60 rounded-[36px]"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="w-[70%] space-y-5">
+                    <h1 class="text-6xl font-extrabold leading-tight">End-to-End Travel with <span class="text-primary-clr ">P Paribahan</span></h1>
+                    <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The 
+                        integrated testing features allow for a streamlined </p>
+                    <button class="btn bg-primary-clr text-black text-xl font-bold"> Buy Tickets</button>
+                  </div>
+                </div>
+              </div>
+        </section>
+
+    </header>
+    <main>
+        <section class=" my-28">
+            <h1 class="text-4xl font-bold text-center m-auto mb-7">Best offers for you</h1>
+            <!-- coupon -->
+            <div class=" flex gap-6 justify-center">
+
+                <div class="rounded-2xl  bg-[#FFBF0F] flex justify-between">
+                    <div class="pl-11 flex flex-col justify-center ">
+                        <h1 class="text-4xl font-extrabold ">15% OFF</h1>
+                        <p class="text-xl font-semibold">on your next purchase</p>
+                        <p class="text-sm font-medium">use by January 2024</p>
+                    </div>
+                    <div>
+                       <img src="./images/cupon-devider.png" alt=""> 
+                        
+                    </div>
+                    <div class="pr-7 flex flex-col justify-center ">
+                        <h1 class="text-4xl font-bold">NEW15</h1>
+                        <p class="text-sm font-medium">Coupon Code</p>
+                    </div>
+    
+                </div>
+
+                <div class="rounded-2xl  bg-[#F78C9C] flex justify-between">
+                    <div class="pl-11 flex flex-col justify-center ">
+                        <h1 class="text-4xl font-extrabold ">20% OFF</h1>
+                        <p class="text-xl font-semibold">on your next purchase</p>
+                        <p class="text-sm font-medium">use by January 2024</p>
+                    </div>
+                    <div>
+                       <img src="./images/cupon-devider.png" alt=""> 
+                        
+                    </div>
+                    <div class="pr-7 flex flex-col justify-center ">
+                        <h1 class="text-4xl font-bold">NEW15</h1>
+                        <p class="text-sm font-medium">Coupon Code</p>
+                    </div>
+    
+                </div>
+            </div>
+           
+
+
+        </section>
+
+    </main>
+
+
+    <h1 class="bg-primary-clr">Hello </h1>
+</body>
+</html>
