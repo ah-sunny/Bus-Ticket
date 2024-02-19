@@ -51,8 +51,8 @@
             <div class="hero min-h-screen rounded-[36px] " style="background-image: url(./images/banner.png);">
                 <div class="hero-overlay bg-opacity-60 rounded-[36px]"></div>
                 <div class="hero-content text-center text-neutral-content">
-                  <div class="w-[70%] space-y-5">
-                    <h1 class="text-6xl font-extrabold leading-tight">End-to-End Travel with <span class="text-primary-clr ">P Paribahan</span></h1>
+                  <div class="w-[90%] lg:w-[70%] space-y-5">
+                    <h1 class="text-4xl lg:text-6xl font-extrabold lg:leading-tight">End-to-End Travel with <span class="text-primary-clr ">P Paribahan</span></h1>
                     <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The 
                         integrated testing features allow for a streamlined </p>
                     <button class="btn bg-primary-clr border-none text-black text-xl font-bold"> Buy Tickets</button>
@@ -67,7 +67,7 @@
         <section class="w-[90%] m-auto my-28 flex flex-col space-y-9">
             <h1 class="text-4xl font-bold text-center m-auto ">Best offers for you</h1>
             <!-- coupon -->
-            <div class=" flex gap-6 justify-center">
+            <div class=" flex flex-col lg:flex-row gap-6 justify-center">
 
                 <div class="rounded-2xl  bg-[#FFBF0F] flex justify-between">
                     <div class=" pl-11 w-[68%] flex flex-col justify-center ">
@@ -87,7 +87,7 @@
                 </div>
 
                 <div class="rounded-2xl  bg-[#F78C9C] flex justify-between">
-                    <div class="w-[70%] pl-11 flex flex-col justify-center ">
+                    <div class=" lg:w-[70%] pl-11 flex flex-col justify-center ">
                         <h1 class="text-4xl font-extrabold ">20% OFF</h1>
                         <p class="text-xl font-semibold">on your next purchase</p>
                         <p class="text-sm text-seatName-clr font-semibold">use by January 2024</p>
@@ -97,7 +97,7 @@
                         
                     </div>
                     <div class="pr-7 flex flex-col justify-center ">
-                        <h1 class="text-4xl font-bold">Couple 20</h1>
+                        <h1 class="text-3xl lg:text-4xl font-bold">Couple 20</h1>
                         <p class="text-sm text-seatName-clr font-semibold">Coupon Code</p>
                     </div>
                 </div>
@@ -116,12 +116,12 @@
                     integrated testing features allow for a streamlined </p>
             </div>
             <!-- bus info details part-->
-            <div class="h-[330px] w-[90%] bg-white rounded-2xl flex  m-auto ">
+            <div class="h-auto lg:h-[330px] w-[90%] bg-white rounded-2xl flex  m-auto ">
 
                 <!-- left side info -->
-                <div class="w-[75%]  p-8 rounded-2xl">
+                <div class="lg:w-[75%]  p-8 rounded-2xl">
                     <!-- info heading -->
-                    <div class=" w-[100%] flex justify-between">
+                    <div class=" w-[100%] flex flex-col lg:flex-row justify-between">
                         <div class="flex gap-4">
                             <div>
                                 <img src="./images/bus-logo.png" alt="">
@@ -142,7 +142,7 @@
                     <div class=" mt-2 p-5 rounded-xl bg-[#F7F8F8] text-lg text-seatName-clr space-y-5">
                             <div class="flex justify-between border-b-2 border-dashed pb-2"><p>Route</p> <p class="text-black font-semibold">Dhaka - Sylhet</p></div>
                             <div class="flex justify-between border-b-2 border-dashed pb-2"><p>Departure Time</p> <p class="text-black font-semibold">9:00 PM</p></div>
-                            <div class="flex justify-between text-lg font-medium text-black ">
+                            <div class="flex flex-col lg:flex-row justify-between gap-2 lg:gap-0 text-lg font-medium text-black ">
                                 <p class="bg-[#0307120D] rounded-xl p-2">Boarding Point - Laximipur</p>
                                 <p class="bg-[#0307120D] rounded-xl p-2">Droping Point - Bogura</p>
                                 <p class="bg-[#0307120D] rounded-xl p-2">Est.Time - 11Hour</p>
@@ -164,9 +164,9 @@
             </div>
 
             <!-- seat and passenger section-->
-            <section class="w-[90%] flex p-7 bg-white rounded-2xl m-auto ">
+            <section class="w-[90%] flex flex-col lg:flex-row p-7 bg-white rounded-2xl m-auto ">
                 <!-- seat left part -->
-<div class="w-[55%] pr-7 border-r-2 border-dashed">
+<div class="lg:w-[55%] lg:pr-7 lg:border-r-2 border-dashed">
                 <!-- seat heading -->
                 <div>
                     <h1 class="text-2xl font-semibold pb-2">Select Your Seat</h1>
@@ -250,7 +250,7 @@
     </div>
 </div>
 <!-- seat right side -->
-<div class=" p-5 w-[45%]">
+<div class=" p-5 lg:w-[45%]">
     <h1 class="w-full text-2xl font-semibold pb-2 border-b-2 border-dashed">Select Your Seat</h1>
 
     <!-- ticket price part -->
@@ -308,7 +308,7 @@
 
 
 
-<footer class="p-32 bg-neutral">
+<footer class="p-14 lg:p-20 bg-neutral">
     <div class="footer items-center  text-neutral-content  border-b-2 border-dashed pb-9 ">
     
         <aside class=" flex flex-col gap-5">
@@ -320,18 +320,18 @@
           <div class="flex gap-2 bg-black p-4 border-2 border-white rounded-2xl">
                 <img src="./images/playstore.png" alt="">
                 <div>
-                    <p>GET IT ON</p>
-                    <h1>Google Play</h1>
+                    <p class="font-medium">GET IT ON</p>
+                    <h1 class="text-3xl font-bold">Google Play</h1>
                 </div>
           </div>
         </nav>
 
     </div> 
-    <div class=" flex justify-between text-white my-9">
+    <div class=" flex flex-col lg:flex-row gap-5 justify-between text-white my-5 lg:my-9">
             <div>
-                <p>Copyright © All right reserved , P-Ticket service limited 2024</p>
+                <p>Copyright © All right reserved, P-Ticket service limited 2024</p>
             </div>
-            <div class=" flex gap-5">
+            <div class=" flex flex-col lg:flex-row gap-5">
                 <p>Terms & Condition</p>
                 <p>Return & refund policy</p>
                 <p>Privacy policy</p>
