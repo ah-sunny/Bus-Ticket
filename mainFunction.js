@@ -1,23 +1,48 @@
 
 
-const buttons = document.querySelectorAll('.seat');
+// Get all elements with the class name 'seat'
+let seats = document.getElementsByClassName('seat');
 
-console.log(buttons);
+for (let i = 0; i < seats.length; i++) {
 
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    button.style.backgroundColor = 'red';
+  seats[i].addEventListener('click', function(event) {
+    
+    event.target.style.backgroundColor = '#1DD100';
+    event.target.style.color = 'white';
 
-    const currentAvailableSeat = availableSeat - 1;
-    SetAvailableSeatNumber(currentAvailableSeat);
+    const sani = event.target
+    console.log('target : ',sani);
 
-    const currentSelectedSeat = selectSeat + 1;
-    setSelecetSeatNumber(currentSelectedSeat);
+    //selected seat func
+    const selectedSeat = getNumberByID('selected_seat')
+    const currentSelectedSeat = selectedSeat + 1;
+    setNumberByID('selected_seat',currentSelectedSeat);
 
+    //avilable seat
+    const avilSeatNUmber = getNumberByID('available_seat');
+    const currentAvialableSeat = avilSeatNUmber - 1;
+    setNumberByID('available_seat',currentAvialableSeat);
+
+
+    //location
+    const apendLocation = document.getElementById('append_seat')
+
+    //apend
+    const br = document.createElement('br')
+    //apendLocation.appendChild(br);
+
+    const p = document.createElement('div');
+    p.innerHTML ='<div class="flex justify-between"> <p id="single_selected" ></p> <p>Economy</p> <p>550</p>  ';
+    apendLocation.appendChild(p);
+
+    // clicked seat
+    const targetValue = event.target.innerText ;
+    
+    setNumberByID('single_selected',targetValue);
+    
 
 
   });
-});
-
+}
 
 
