@@ -40,6 +40,7 @@ function setEnableById(event){
 
 }
  
+
 //coupon Apply part
 function discountApplyCoupon(){
   console.log('button clicked')
@@ -81,5 +82,3 @@ function discountApplyCoupon(){
 
 
 }
-
-

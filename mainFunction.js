@@ -41,23 +41,21 @@ if(count < 4 ){
   const grandPrice = getNumberByID('grand_price');
   setNumberByID('grand_price',currentTotalPrice)
   
+  
+  
 
-
-
-
-    //discount coupon point
-    if(count === 4){
-      setEnableById('discount_btn');
-      setEnableById('discount_input')
-      discountApplyCoupon();
-      
-
-    }
-
-count++;
-
+    //setEnableById('discount_btn');
+    //setEnableById('discount_input')
+    //discountApplyCoupon();
     
-//
+    
+
+  count++;
+
+
+
+  
+
 } else {
   alert('Click limit reached!'); // Inform user about click limit
 }
@@ -70,19 +68,12 @@ count++;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 function nextFunc(){
+  const popupForNextButton = document.getElementById('popUp_next');
+  popupForNextButton.classList.remove('hidden');
 
-
+}
+function PopUpContinue(){
+  const popupForNextButton = document.getElementById('popUp_next');
+  popupForNextButton.classList.add('hidden');
 }
