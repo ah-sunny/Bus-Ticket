@@ -33,23 +33,53 @@ function appendSelectedSeatWithPrice(event){
 
 }
 
+//remove disabled Attribute
+function setEnableById(event){
+  const targetElement = document.getElementById(event);
+  targetElement.removeAttribute('disabled');
 
-
-
-
-    /*
-    //note
-// 
-    
-//     const p = document.createElement('div');
-//     p.innerHTML =`<div class="flex justify-between"> <p id="single_selected" ></p> <p>Economy</p> <p>550</p> `;
-//     //apendLocation.appendChild(p);
-const classNumber = 0;
-
-    //location
+}
+ 
+//coupon Apply part
+function discountApplyCoupon(){
+  console.log('button clicked')
+  const couponInputValue = document.querySelector("#discount_input").value;
   
-    const apendLocation = document.querySelectorAll('.ape_seat')
-    console.log(apendLocation);
-    console.log(apendLocation[classNumber]);
+  if(couponInputValue === 'NEW15' || couponInputValue === 'Couple 20' ){
 
-    */
+    let curGrandPrice = getNumberByID('grand_price');
+
+    
+     let discountGrandPrice;
+     let disPerName ;
+    if(couponInputValue === 'NEW15'  ){
+       discountGrandPrice = curGrandPrice * 0.15 ;
+       disPerName = 15; 
+    }
+    if(couponInputValue === 'Couple 20'){
+      discountGrandPrice = curGrandPrice * 0.20 ;
+      disPerName = 20 ;
+    }
+
+    const afterDiscount = curGrandPrice - discountGrandPrice ;
+    setNumberByID('grand_price',afterDiscount);
+
+    const disText = document.createElement('p');
+    disText.innerText = ` You Got ${disPerName}% Discount ` ;
+    disText.className = `text-center m-auto text-green-500`;
+
+    const discountTextPlace = document.getElementById('append_dis_text');
+    discountTextPlace.appendChild(disText);
+
+    const couponParentDiv = document.getElementById('coupon_apply_div');
+    couponParentDiv.classList.add('hidden');
+
+
+  }else{
+    alert('Please input the correct coupon');
+  }
+
+
+}
+
+

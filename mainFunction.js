@@ -1,4 +1,5 @@
 
+let count = 0;
 
 // Get all elements with the class name 'seat'
 let seats = document.getElementsByClassName('seat');
@@ -7,6 +8,11 @@ for (let i = 0; i < seats.length; i++) {
 
   seats[i].addEventListener('click', function(event) {
     
+//clickt limit
+if(count < 4 ){
+  
+
+
     event.target.style.backgroundColor = '#1DD100';
     event.target.style.color = 'white';
 
@@ -26,11 +32,57 @@ for (let i = 0; i < seats.length; i++) {
     //apend by function call
     appendSelectedSeatWithPrice(targetValue);
     
+  //total price update
+  const totalPrice = getNumberByID('total_price')
+  const currentTotalPrice = totalPrice + 550;
+  setNumberByID('total_price',currentTotalPrice);
 
-
+   //grand price update
+  const grandPrice = getNumberByID('grand_price');
+  setNumberByID('grand_price',currentTotalPrice)
   
+
+
+
+
+    //discount coupon point
+    if(count === 4){
+      setEnableById('discount_btn');
+      setEnableById('discount_input')
+      discountApplyCoupon();
+      
+
+    }
+
+count++;
+
+    
+//
+} else {
+  alert('Click limit reached!'); // Inform user about click limit
+}
+
+
 
   });
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function nextFunc(){
+
+
+}
