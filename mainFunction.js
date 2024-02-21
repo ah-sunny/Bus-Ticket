@@ -1,16 +1,26 @@
 
 let count = 0;
 
-// Get all elements with the class name 'seat'
 let seats = document.getElementsByClassName('seat');
+
+// track clicked seats
+const clickedSeat = new Array(seats.length).fill(false);
+
 
 for (let i = 0; i < seats.length; i++) {
 
   seats[i].addEventListener('click', function(event) {
     
 //clickt limit
-if(count < 4  ){
+if(count < 4 ){
   
+  if(clickedSeat[i]){
+    //alert("this seat is selected");
+    alertForDoubleClick();
+  }else{
+
+      // Mark the seat as clicked
+      clickedSeat[i] = true;
 
 
     event.target.style.backgroundColor = '#1DD100';
@@ -46,13 +56,11 @@ if(count < 4  ){
     //setEnableById('discount_input')
     //discountApplyCoupon();
     
-  count++;
+  count++;}
 
 } else {
   alertForSeatLimit();
 }
-
-
 
   });
 }
@@ -100,11 +108,12 @@ function discountApplyCoupon(){
 }
 
 
-
+//modal for next button
 function nextFunc(){
-  showByID('popUp_next')
+  const modalAsAlert = document.getElementById('popup_for_next');
+  modalAsAlert.showModal();
 
 }
-function PopUpContinue(){
-  hiddenByID('popUp_next');
-}
+// function PopUpContinue(){
+//   hiddenByID('popUp_next');
+// }

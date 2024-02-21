@@ -66,8 +66,7 @@
                 <div class="hero-content text-center text-neutral-content">
                   <div class="w-[90%] lg:w-[70%] space-y-5">
                     <h1 class="text-4xl lg:text-6xl font-extrabold lg:leading-tight">End-to-End Travel with <span class="text-primary-clr ">P Paribahan</span></h1>
-                    <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The 
-                        integrated testing features allow for a streamlined </p>
+                    <p class="mb-5 pb-4">Our platform simplifies ticket booking for concerts, sports events, and more.Purchase tickets hassle-free with our user-friendly interface.Discover exciting events and reserve your spot effortlessly. </p>
                     <a href="#Bus_ticket_part"> <button class="btn bg-primary-clr border-none text-black text-xl font-bold"> Buy Tickets</button> </a>
                   </div>
                 </div>
@@ -307,7 +306,7 @@
                         <input  id="discount_input" type="text" placeholder="Have any coupon?" class="input input-md w-full h-[56px] flex-grow "  /> 
                         <button  onclick="discountApplyCoupon()" id="discount_btn" class="btn absolute right-1 top-1 bg-primary-clr text-white ">Apply</button>
                     </form>
-                    <div class="flex justify-between"><h1>Grand Price</h1> <h1>BDT <span id="grand_price">0</span></h1></div>
+                    <div class="flex justify-between border-t-2 border-dashed pt-2"><h1>Grand Price</h1> <h1>BDT <span id="grand_price">0</span></h1></div>
 
             </div>
              
@@ -339,19 +338,24 @@
 
         </section>
 
-        <!-- popup -->
-        <section id="popUp_next" class="hidden absolute p-28 px-48 bottom-36 w-[100%] bg-slate-500 bg-opacity-20 rounded-3xl h-screen">
-
-            <div class=" w-[80%] m-auto p-9 text-center rounded-2xl bg-white flex flex-col justify-center items-center gap-4">
-
+           <!-- use this Modal as NEXT BUTTON alert -->
+        <section>   
+            <dialog id="popup_for_next" class="modal modal-bottom sm:modal-middle">
+              <div class="modal-box w-[80%] m-auto p-9 text-center rounded-2xl bg-white flex flex-col justify-center items-center gap-4">
                 <img class="h-36 w-36"  src="./images/success.png" alt="" srcset="">
                 <h1 class="text-4xl font-extrabold text-primary-clr">SUCCESS</h1>
                 <P class="text-lg font-bold">Thank you for Booking Our Bus Seats</P>
                 <p class="text-lg font-bold">We are working hard to find the best service and deals for you</p>
-                <button onclick="PopUpContinue()" class="btn bg-primary-clr text-white">Continue</button>
-
-            </div>
-        </section>
+                    <div class="modal-action">
+                      <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal  -->
+                        <button class="btn bg-primary-clr text-white border-none ">Close</button> 
+                      </form>
+                    </div>
+              </div>
+            </dialog>
+         </section>
+         <!--  -->
 
         <!-- use this Modal as alert -->
         <section>   
@@ -369,6 +373,22 @@
                 </dialog>
         </section>
         <!--  -->
+
+         <!-- alert for double click check -->
+         <section>   
+            <dialog id="double_click" class="modal modal-bottom sm:modal-middle ">
+              <div class="modal-box h-auto">
+                <p class="py-1 m-auto w-auto font-bold">this seat is selected.</p>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal  -->
+                    <button class="btn p-2 bg-primary-clr text-white border-none ">Close</button> 
+                  </form>
+                </div>
+              </div>
+            </dialog>
+    </section>
+    <!--  -->
     </main>
 
 

@@ -66,3 +66,8 @@ function alerForApplyButton(){
   modalAsAlert.showModal();
 
  }
+//alert for double click
+function alertForDoubleClick(){
+  const modalAsAlert = document.getElementById('double_click');
+  modalAsAlert.showModal();
+}
