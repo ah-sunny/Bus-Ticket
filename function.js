@@ -12,7 +12,7 @@ function setNumberByID(eventID,eventValue){
     selectSeatElement.innerText = eventValue;
 }
 
-//apend
+//apend bus seat function
 function appendSelectedSeatWithPrice(event){
   //location
   const apendLocation = document.getElementById('append_seat')
@@ -40,45 +40,28 @@ function setEnableById(event){
 
 }
  
-
-//coupon Apply part
-function discountApplyCoupon(){
-  console.log('button clicked')
-  const couponInputValue = document.querySelector("#discount_input").value;
-  
-  if(couponInputValue === 'NEW15' || couponInputValue === 'Couple 20' ){
-
-    let curGrandPrice = getNumberByID('grand_price');
-
-    
-     let discountGrandPrice;
-     let disPerName ;
-    if(couponInputValue === 'NEW15'  ){
-       discountGrandPrice = curGrandPrice * 0.15 ;
-       disPerName = 15; 
-    }
-    if(couponInputValue === 'Couple 20'){
-      discountGrandPrice = curGrandPrice * 0.20 ;
-      disPerName = 20 ;
-    }
-
-    const afterDiscount = curGrandPrice - discountGrandPrice ;
-    setNumberByID('grand_price',afterDiscount);
-
-    const disText = document.createElement('p');
-    disText.innerText = ` You Got ${disPerName}% Discount ` ;
-    disText.className = `text-center m-auto text-green-500`;
-
-    const discountTextPlace = document.getElementById('append_dis_text');
-    discountTextPlace.appendChild(disText);
-
-    const couponParentDiv = document.getElementById('coupon_apply_div');
-    couponParentDiv.classList.add('hidden');
-
-
-  }else{
-    alert('Please input the correct coupon');
-  }
-
-
+//hidden
+function hiddenByID(event){
+  const alertText = document.getElementById(event);
+  alertText.classList.add('hidden');
 }
+//remove hidden
+function showByID(event){
+  const alertText = document.getElementById(event);
+  alertText.classList.remove('hidden');
+}
+//alert for coupon button
+function alerForApplyButton(){
+  showByID('aler_apply');
+  const closeButton = document.getElementById('apply_alert_close');
+  closeButton.addEventListener('click',function(){
+     hiddenByID('aler_apply');
+  })
+ 
+ }
+
+ //alert for bus seat limit 
+ function alertForSeatLimit(){
+  
+
+ }
