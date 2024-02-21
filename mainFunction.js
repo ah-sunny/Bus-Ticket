@@ -9,7 +9,7 @@ for (let i = 0; i < seats.length; i++) {
   seats[i].addEventListener('click', function(event) {
     
 //clickt limit
-if(count < 4 ){
+if(count < 4  ){
   
 
 
@@ -49,7 +49,7 @@ if(count < 4 ){
   count++;
 
 } else {
-  alert('You already reached the limit !');
+  alertForSeatLimit();
 }
 
 

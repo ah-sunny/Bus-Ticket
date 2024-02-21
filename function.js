@@ -62,6 +62,7 @@ function alerForApplyButton(){
 
  //alert for bus seat limit 
  function alertForSeatLimit(){
-  
+  const modalAsAlert = document.getElementById('my_modal_5');
+  modalAsAlert.showModal();
 
  }
