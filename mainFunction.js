@@ -49,7 +49,7 @@ if(count < 4 ){
   count++;
 
 } else {
-  alert('You reached seat limit !');
+  alert('You already reached the limit !');
 }
 
 
