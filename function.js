@@ -40,7 +40,7 @@ function setEnableById(event){
 
 }
  
-//hidden
+//hidden added
 function hiddenByID(event){
   const alertText = document.getElementById(event);
   alertText.classList.add('hidden');
@@ -50,12 +50,15 @@ function showByID(event){
   const alertText = document.getElementById(event);
   alertText.classList.remove('hidden');
 }
+
+
 //alert for coupon button
 function alerForApplyButton(){
   showByID('aler_apply');
   const closeButton = document.getElementById('apply_alert_close');
   closeButton.addEventListener('click',function(){
      hiddenByID('aler_apply');
+
   })
  
  }

@@ -68,7 +68,7 @@ if(count < 4 ){
 //coupon Apply part
 function discountApplyCoupon(){
   console.log('button clicked')
-  const couponInputValue = document.querySelector("#discount_input").value;
+  const couponInputValue = document.getElementById("discount_input").value;
   
   if(couponInputValue === 'NEW15' || couponInputValue === 'Couple 20' ){
 
@@ -100,7 +100,7 @@ function discountApplyCoupon(){
     couponParentDiv.classList.add('hidden');
 
 
-  }else{
+ }else{
     alerForApplyButton();
   }
 
@@ -114,6 +114,3 @@ function nextFunc(){
   modalAsAlert.showModal();
 
 }
-// function PopUpContinue(){
-//   hiddenByID('popUp_next');
-// }
